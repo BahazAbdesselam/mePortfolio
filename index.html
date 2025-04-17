@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Dr. Abdesselam Bahaz, Civil Engineer specializing in metallic structures.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Dr. Abdesselam Bahaz</title>
+</head>
+<body>
+  <header>
+    <a href="#" class="logo">Dr. Abdesselam Bahaz</a>
+    <span class="menu-toggle"><i class="fa-solid fa-bars"></i></span>
+    <nav class="navigation">
+      <a href="#services">Services</a>
+      <a href="#projets">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="main">
+    <div class="main-content">
+      <img class="profile-img" src="images/mine.png" alt="Dr. Abdesselam Bahaz">
+      <h2>Dr. Abdesselam Bahaz</h2>
+      <h3>PhD & Civil Engineer in Steel and Composite Structures</h3>
+      <p>Innovative solutions for robust and efficient designs.</p>
+      <a href="#projets" class="main-btn">Explore My Projects</a>
+    </div>
+  </section>
+
+  <section class="cards" id="services">
+    <h2 class="title">Services</h2>
+    <div class="content">
+      <div class="card">
+        <div class="icon"><i class="fa-solid fa-calculator"></i></div>
+        <div class="info">
+          <h3>Conception & Calcul</h3>
+          <p>Precise load and stress calculations for robust structures.</p>
+          <a href="service.html" class="card-btn">Our services</a>
+        </div>
+      </div>
+      <!-- Add other cards similarly -->
+    </div>
+  </section>
+
+  <section class="projets" id="projets">
+    <h2 class="title">Projects</h2>
+    <div class="content">
+      <div class="projets-card">
+        <div class="projets-image">
+          <img src="images/work01.jpeg" alt="Billboard Project" loading="lazy">
+        </div>
+        <div class="projets-info">
+          <p class="projets-category">Stability & Foundation Calculations</p>
+          <strong class="projets-title">Billboard Panels, Hassi Messaoud</strong>
+        </div>
+      </div>
+      <div class="projets-card">
+        <div class="projets-image">
+          <img src="images/PEB.JPG" alt="Factory Project" loading="lazy">
+        </div>
+        <div class="projets-info">
+          <p class="projets-category">Conception & Calcul Charpente Métallique</p>
+          <strong class="projets-title">Factory for Concrete Products, Ghardaia</strong>
+        </div>
+      </div>
+      <div class="projets-card">
+        <div class="projets-image">
+          <img src="images/adrar.JPEG" alt="Warehouse Project" loading="lazy">
+        </div>
+        <div class="projets-info">
+          <p class="projets-category">Elaboration de Devis et Métré</p>
+          <strong class="projets-title">Cold Storage Warehouse, Adrar</strong>
+        </div>
+      </div>
+      <div class="projets-card">
+        <div class="projets-image">
+          <img src="images/Blida.jpg" alt="Insulin Factory Project" loading="lazy">
+        </div>
+        <div class="projets-info">
+          <p class="projets-category">Stability Verification for Solar Panels</p>
+          <strong class="projets-title">Insulin Production Factory, Blida</strong>
+        </div>
+      </div>
+      <div class="projets-card">
+        <div class="projets-image">
+          <img src="images/hospital.JPG" alt="Hospital Project" loading="lazy">
+        </div>
+        <div class="projets-info">
+          <p class="projets-category">Conception & Calcul of Roof Structures</p>
+          <strong class="projets-title">Hospital Tirichine Brahim, Ghardaia</strong>
+        </div>
+      </div>
+      <div class="projets-card">
+        <div class="projets-image">
+          <img src="images/metlili.JPG" alt="Cold Storage Project" loading="lazy">
+        </div>
+        <div class="projets-info">
+          <p class="projets-category">Stability Verification for Equipment</p>
+          <strong class="projets-title">Cold Storage with Heat Exchangers, Metlili</strong>
+        </div>
+      </div>
+      <div class="projets-card">
+        <div class="projets-image">
+          <img src="images/jalco.JPEG" alt="Crushing Station Project" loading="lazy">
+        </div>
+        <div class="projets-info">
+          <p class="projets-category">Dimensionnement & Calcul of Foundations</p>
+          <strong class="projets-title">Crushing Station 600 ton/h, Metlili</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="contact" id="contact">
+    <h2 class="title"> Contact me</h2>
+    <div class="content">
+    </div>
+    <form id="contact-form" class="contact-form">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Message" required></textarea>
+      <button type="submit" class="main-btn">Send Message</button>
+    </form>
+    <div id="form-message" class="form-message"></div>
+  </section>
+
+  <footer class="footer">
+    <p class="footer-title">Copyrights @ <span>Bahaz Abdesselam</span></p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/a-bahaz/"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    // Initialize EmailJS
+    (function () {
+      emailjs.init("yEYxKEXWUsrlZhRBT"); // Replace with your EmailJS Public Key
+    })();
+
+    // Mobile menu toggle and form submission
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('.navigation');
+      toggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+      });
+
+      document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        emailjs
+          .sendForm('service_x7xdsw9', 'B140288', this)
+          .then(
+            () => {
+              alert('Message sent successfully!');
+              this.reset();
+            },
+            (error) => {
+              alert('Failed to send message: ' + JSON.stringify(error));
+            }
+          );
+      });
+    });
+  </script>
+</body>
+</html>
